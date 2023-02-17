@@ -1,0 +1,65 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+body,
+#header {
+  padding-right: 0 !important;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+.login-box {
+  padding: 9% 0 0;
+  height: 100%;
+  background: #29abe2;
+  background: linear-gradient(to right, #29abe2, #f7931e);
+}
+.section-even-bg {
+  background: #f6f9ff;
+}
+
+/* #F7931E, #29ABE2 */
+.btn-primary {
+  background-color: #29abe2;
+}
+.navbar .getstarted {
+  background: #f7931e;
+  border: 0;
+}
+.navbar .getstarted:hover,
+.navbar .getstarted:focus {
+  background: #e19b4c !important;
+}
+
+.breadcrumbs {
+  background: #29abe2;
+}
+.text-theme-1 {
+  color: #f7931e;
+}
+.text-theme-2 {
+  color: #29abe2;
+}
+
+.bg-theme-1 {
+  color: #f7931e;
+}
+.bg-theme-2 {
+  color: #29abe2;
+}
+
+.header .logo span,
+.navbar a,
+.navbar a:focus,
+.section-header p {
+  color: #29abe2;
+}
+
+.s-title {
+  font-weight: bold;
+}
