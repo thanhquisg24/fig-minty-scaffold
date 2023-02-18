@@ -11,7 +11,7 @@ const FallbackContainerStyle: React.CSSProperties = {
 function SpinerInnerContainer(): JSX.Element {
   return (
     <div style={FallbackContainerStyle}>
-      <TailSpin color="#18d0dd" height={80} width={80} />
+      <TailSpin color="#f7931e" height={80} width={80} />
     </div>
   );
 }

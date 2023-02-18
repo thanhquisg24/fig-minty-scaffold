@@ -1,6 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 
 import { useDropzone } from "react-dropzone";
+import { useMintNftContext } from "../mint-context";
 
 const baseStyle: React.CSSProperties = {
   flex: 1,
@@ -63,19 +64,19 @@ const img: React.CSSProperties = {
 };
 
 export function DrawDropImg() {
-  const [currentFiles, setCurrentFiles] = useState<any>([]);
+  const { setValueState, imageBlob } = useMintNftContext();
+  // const [currentFiles, setCurrentFiles] = useState<any>([]);
   const { getRootProps, getInputProps, isFocused, isDragAccept, isDragReject } = useDropzone({
+    maxFiles: 1,
     accept: {
       "image/*": [],
     },
     onDrop: (_acceptedFiles: any) => {
-      setCurrentFiles(
-        _acceptedFiles.map((_file: Blob | MediaSource) =>
-          Object.assign(_file, {
-            preview: URL.createObjectURL(_file),
-          }),
-        ),
+      const _files = _acceptedFiles.map((_file: Blob | MediaSource | File) =>
+        Object.assign(_file, { preview: URL.createObjectURL(_file) }),
       );
+      setValueState({ imageBlob: _files });
+      // setCurrentFiles(_files);
     },
   });
   const style = useMemo(
@@ -92,7 +93,7 @@ export function DrawDropImg() {
   //     {file.path} - {file.size} bytes
   //   </li>
   // ));
-  const thumbs = currentFiles.map((_file: any) => (
+  const thumbs = imageBlob.map((_file: any) => (
     <div style={thumb} key={_file.name}>
       <div style={thumbInner}>
         <img
@@ -110,7 +111,7 @@ export function DrawDropImg() {
 
   useEffect(() => {
     // Make sure to revoke the data uris to avoid memory leaks, will run on unmount
-    return () => currentFiles.forEach((file: { preview: string }) => URL.revokeObjectURL(file.preview));
+    return () => imageBlob.forEach((file) => URL.revokeObjectURL(file.preview));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
