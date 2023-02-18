@@ -56,7 +56,7 @@ export const pinJsonMetadata = async (data: IMetaDataJson): Promise<IPinataResul
 
   const postData = JSON.stringify({
     pinataOptions: {
-      cidVersion: 1,
+      cidVersion: 0,
     },
     pinataMetadata: {
       name: `${data.name}.json`,
