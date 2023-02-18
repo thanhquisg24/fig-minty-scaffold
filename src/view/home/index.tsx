@@ -1,9 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
 import Footer from "../../layout/footer";
 import Header from "../../layout/header";
-import HistorySection from "./history-section";
-import SalesSection from "./sales-section";
+import MintSection from "./mint-section";
 
 export default function HomeView() {
   return (
@@ -13,12 +10,11 @@ export default function HomeView() {
         {/* ======= Breadcrumbs ======= */}
         <section className="breadcrumbs pt-4">
           <div className="container">
-            <h2>Private Sales</h2>
+            <h2>Let&apos;s Mint Your Nft</h2>
           </div>
         </section>
         {/* End Breadcrumbs */}
-        <SalesSection />
-        <HistorySection />
+        <MintSection />
       </main>
       <Footer />
     </>

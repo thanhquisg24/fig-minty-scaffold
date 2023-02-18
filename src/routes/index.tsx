@@ -1,4 +1,3 @@
-import AuthenticationRoutes from "./AuthenticationRoutes";
 import HandleNotFoundRoutes from "./HandleNotFoundRoute";
 import MainRoutes from "./MainRoutes";
 import { useRoutes } from "react-router-dom";
@@ -8,5 +7,5 @@ import { useRoutes } from "react-router-dom";
 // });
 
 export default function ThemeRoutes() {
-  return useRoutes([...MainRoutes, ...AuthenticationRoutes, ...HandleNotFoundRoutes]);
+  return useRoutes([...MainRoutes, ...HandleNotFoundRoutes]);
 }

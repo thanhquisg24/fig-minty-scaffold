@@ -1,7 +1,9 @@
+import rootReducer, { initialState } from "./reducers";
+
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import rootReducer, { initialState } from "./reducers";
-import { rootSaga } from "./sagas";
+
+// import { rootSaga } from "./sagas";
 
 declare global {
   interface Window {
@@ -20,7 +22,7 @@ const store = configureStore({
   devTools: process.env.NODE_ENV !== "production",
   preloadedState,
 });
-sagaMiddleware.run(rootSaga);
+// sagaMiddleware.run(rootSaga);
 
 export type AppDispatch = typeof store.dispatch;
 export { store };

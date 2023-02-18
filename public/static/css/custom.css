@@ -63,3 +63,14 @@ body,
 .s-title {
   font-weight: bold;
 }
+
+.box-even {
+  background: #fafbff;
+  padding: 30px;
+  height: 100%;
+}
+.box-odd {
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0px 0 5px rgb(1 41 112 / 8%);
+}
