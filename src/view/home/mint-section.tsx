@@ -5,7 +5,7 @@ import { MintNftContextProvider } from "./mint-context";
 export default function MintSection() {
   return (
     <MintNftContextProvider doReloadData={() => {}}>
-      <section className="inner-page">
+      <section className="inner-page min-h-700">
         <div className="container values">
           <div className="row">
             <div className="col-md-8">

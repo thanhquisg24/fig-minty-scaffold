@@ -7,7 +7,15 @@ body,
 #header {
   padding-right: 0 !important;
 }
-
+/* #root {
+  position: relative;
+} */
+.min-h-700 {
+  min-height: 700px;
+}
+#footer {
+  padding-bottom: 70px;
+}
 .btn-login {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
