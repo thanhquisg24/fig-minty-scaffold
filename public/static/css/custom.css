@@ -35,12 +35,16 @@ body,
 .btn-primary {
   background-color: #29abe2;
 }
-.navbar .getstarted {
+.navbar .getstarted,
+.btn-connect-wallet {
   background: #f7931e;
   border: 0;
+  color: white;
 }
 .navbar .getstarted:hover,
-.navbar .getstarted:focus {
+.navbar .getstarted:focus,
+.btn-connect-wallet:hover,
+.btn-connect-wallet:focus {
   background: #e19b4c !important;
 }
 

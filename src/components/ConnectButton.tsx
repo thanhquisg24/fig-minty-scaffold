@@ -14,13 +14,17 @@ export default function ConnectButton({ handleOpenModal }: Props) {
   }
 
   return account ? (
-    <button type="button" className="btn-connect-wallet getstarted scrollto d-inline-flex" onClick={handleOpenModal}>
+    <button
+      type="button"
+      className="btn btn-connect-wallet getstarted scrollto d-inline-flex"
+      onClick={handleOpenModal}
+    >
       <Identicon />
       <span className="text-white mx-2">{shortenIfAddress(account)}</span>
     </button>
   ) : (
-    <button type="button" onClick={() => handleConnectWallet()} className="btn-connect-wallet getstarted scrollto">
-      Connect to a wallet
+    <button type="button" onClick={() => handleConnectWallet()} className="btn btn-connect-wallet getstarted scrollto">
+      Connect wallet
     </button>
   );
 }
